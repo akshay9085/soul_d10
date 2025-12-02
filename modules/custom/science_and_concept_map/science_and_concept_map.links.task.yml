@@ -1,0 +1,45 @@
+science_and_concept_map.proposal_pending_0:
+  route_name: science_and_concept_map.proposal_pending
+  title: 'Pending Proposals'
+  weight: 1
+  base_route: science_and_concept_map.proposal_pending
+
+science_and_concept_map.proposal_all:
+  route_name: science_and_concept_map.proposal_all
+  title: 'All Proposals'
+  weight: 4
+  base_route: science_and_concept_map.proposal_pending
+
+science_and_concept_map.abstract_approval_form:
+  route_name: science_and_concept_map.abstract_approval_form
+  title: 'Code Approval'
+  weight: 1
+  base_route: science_and_concept_map.abstract_approval
+
+science_and_concept_map.abstract_bulk_approval_form:
+  route_name: science_and_concept_map.abstract_bulk_approval_form
+  title: 'Bulk Manage'
+  weight: 2
+  base_route: science_and_concept_map.abstract_approval
+
+science_and_concept_map.abstract_0:
+  route_name: science_and_concept_map.abstract
+  title: 'Science and Concept Map'
+  weight: 1
+  base_route: science_and_concept_map.abstract
+
+science_and_concept_map.completed_proposals_all_0:
+  route_name: science_and_concept_map.completed_proposals_all
+  title: 'Completed Science and Concept Maps'
+  weight: 0
+  base_route: science_and_concept_map.completed_proposals_all
+
+science_and_concept_map._list_science_and_concept_map_certificates_0:
+  route_name: science_and_concept_map._list_science_and_concept_map_certificates
+  title: 'List of Science and Concept Map  Mentor Certificates'
+  base_route: science_and_concept_map._list_science_and_concept_map_certificates
+
+science_and_concept_map.generate_pdf_0:
+  route_name: science_and_concept_map.generate_pdf
+  title: 'Download Certificate'
+  base_route: science_and_concept_map.generate_pdf

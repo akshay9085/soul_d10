@@ -1,0 +1,16 @@
+science_and_concept_map.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    science_and_concept_map_report_upload_extensions:
+      type: string
+    science_and_concept_map_code_files_extensions:
+      type: string
+    science_and_concept_map_from_email:
+      type: string
+    science_and_concept_map_emails:
+      type: string
+    science_and_concept_map_cc_emails:
+      type: string
+    science_and_concept_map_abstract_upload_extensions:
+      type: string
