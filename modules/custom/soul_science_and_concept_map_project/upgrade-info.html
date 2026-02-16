@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drupal Module Upgrader analysis report</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,700,600' rel='stylesheet' type='text/css' />
+    <style type="text/css">
+    <!--
+
+body {
+  width: 80%;
+  color: #343434;
+  margin: 1em auto;
+  font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+details {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 2em;
+  display: list-item;
+  list-style: none;
+}
+
+details summary {
+  padding: 1em;
+  margin-bottom: 1em;
+  display: list-item;
+  cursor: pointer;
+}
+
+details.error summary {
+  background-color: #ffd5d5;
+}
+
+details.warning summary {
+  background-color: #fff3bb;
+}
+
+a {
+  color: #095cb1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+aside {
+  font-style: italic;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.group {
+  border: 1px solid #ececec;
+  padding: 1em;
+  display: block;
+}
+
+.group > summary {
+  padding: 0;
+  color: #c8c8c8;
+  margin-bottom: 0;;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  display: list-item;
+}
+
+.group[open] > summary {
+  margin-bottom: 1em;
+}
+
+.group > details:last-child {
+  margin-bottom: 0;
+}
+
+    -->
+    </style>
+  </head>
+  <body>
+    <h1>Drupal Module Upgrader analysis report</h1>
+      <details open="true" class="group">
+      <summary></summary>
+          <details class="error">
+      <summary>Module info files' <code>core</code> key must have a value of <code>8.x</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+    <details class="error">
+      <summary>Info files must contain a <code>type</code> key.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708#type"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+    <details class="warning">
+      <summary>Default configuration is deleted automatically.</summary>
+
+      
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 28</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 29</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 30</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 31</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 32</li>
+            </ul>
+                  <aside>Flagged by hook_uninstall</aside>    </details>
+    <details class="error">
+      <summary><code>hook_menu()</code> has been removed from Drupal 8.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1800686">All functionality of <code>hook_menu()</code> replaced</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2177901">Dynamic routes are now defined in <code>MODULE.routing.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2119699">Page callbacks have been converted to controller classes</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2089605">Route naming convention</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2165243">Contextual links are now plugins defined in <code>MODULE.links.contextual.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2007444">Local actions are now plugins defined in <code>MODULE.links.action.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2044515">Local tasks and now plugins defined in <code>MODULE.links.task.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2228089">Menu links are now defined in <code>MODULE.links.menu.yml</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 5</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:menu</aside>    </details>
+    <details class="error">
+      <summary>Classes must be PSR-4 compliant.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2246699">PSR-4 compatible class loader in Drupal core</a></li>
+              </ul>
+      
+                      </details>
+    <details class="warning">
+      <summary>Static permissions are now defined in <code>MODULE.permissions.yml</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2311427">Defining permissions in <code>MODULE.permissions.yml</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 485</li>
+            </ul>
+            <p class="fixable">This issue can be fixed automatically.</p>      <aside>Flagged by hook_permission</aside>    </details>
+    <details class="warning">
+      <summary>Many common functions, shared variables, and constants have been renamed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2324935">The global theme variables have been replaced by an ActiveTheme object</a></li>
+              </ul>
+      
+                      </details>
+    <details class="error">
+      <summary><code>drupal_goto()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2023537"><code>drupal_goto()</code> removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 668</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 35</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 50</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 937</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 25</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 31</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 46</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 61</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 93</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 239</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 331</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 66</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 130</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 86</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 278</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 386</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 132</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 139</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 450</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 457</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 489</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 522</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 552</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 559</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 883</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 890</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 930</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 961</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 968</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1445</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1452</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1487</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 10</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 138</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 145</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 157</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 292</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 524</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_goto</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_render()</code> has been removed.</summary>
+
+      
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 75</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 512</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 517</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 13</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 55</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_render</aside>    </details>
+    <details class="error">
+      <summary><code>user_load()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845">Entities are now classed objects implementing <code>EntityInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 104</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 59</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 35</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 112</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 294</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 295</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 201</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 470</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 503</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 637</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 910</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 989</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1459</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 19</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 81</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 146</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 206</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 269</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 333</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 377</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 411</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 446</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 478</li>
+            </ul>
+                  <aside>Flagged by _function_call:user_load</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_get_form()</code> has moved into the FormBuilder service.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2121003">Form generation functions moved into FormBuilder service</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 12</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_get_form</aside>    </details>
+    <details class="error">
+      <summary><code>form_set_error()</code> is now a method of <code>FormStateInterface</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2121003">Form functions moved into <code>FormStateInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 173</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 245</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 528</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 532</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 536</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 544</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 553</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 562</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 574</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 579</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 584</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 594</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 598</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 603</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 607</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 614</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 618</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 623</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 629</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 652</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 654</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 666</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 671</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 676</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 681</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 686</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 259</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 428</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1408</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1412</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1417</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1421</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 235</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 240</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 270</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 272</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 275</li>
+            </ul>
+                  <aside>Flagged by _function_call:form_set_error</aside>    </details>
+    <details class="error">
+      <summary><code>l()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2346779"><code>l()</code> replaced by URL generation API</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 503</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 506</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 36</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 33</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 47</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 47</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 61</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 61</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 50</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 144</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 187</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 210</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 249</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_science_and_concept_map_certificate.inc, line 22</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 16</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 18</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 18</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 79</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 83</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 83</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 195</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 376</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 418</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 631</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 834</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 860</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1395</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_mentor_certificates.inc, line 21</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 71</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 79</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 84</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 219</li>
+            </ul>
+                  <aside>Flagged by _function_call:l</aside>    </details>
+    <details class="error">
+      <summary><code>theme()</code> has been renamed to <code>_theme()</code>, and should never be called directly.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2195739"><code>theme()</code> renamed to <code>_theme()</code> and should not be called directly</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 50</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 96</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 67</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_science_and_concept_map_certificate.inc, line 32</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 34</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 100</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_mentor_certificates.inc, line 33</li>
+            </ul>
+                  <aside>Flagged by _function_call:theme</aside>    </details>
+    <details class="error">
+      <summary><code>user_access()</code> is now <code>AccountInterface::hasPermission()</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2049309"><code>user_access()</code> got converted to a method on the user/account interface</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 97</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 249</li>
+            </ul>
+                  <aside>Flagged by _function_call:user_access</aside>    </details>
+    <details class="error">
+      <summary><code>variable_del()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2183531">The Variable API has been removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 28</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 29</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 30</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 31</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 32</li>
+            </ul>
+                  <aside>Flagged by _function_call:variable_del</aside>    </details>
+    <details class="error">
+      <summary><code>variable_get()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2183531">The Variable API has been removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 127</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 144</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 150</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 151</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 152</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 201</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 216</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 222</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 223</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 224</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 258</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 273</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 278</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 279</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 280</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 443</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 647</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 920</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 921</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 922</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 73</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 74</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 75</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 308</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 309</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 310</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 336</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 337</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 338</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 359</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 360</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 361</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 12</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 21</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 30</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 39</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 48</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 57</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 472</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 473</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 474</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 505</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 506</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 507</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 912</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 913</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 914</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1461</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1462</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1463</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 185</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 196</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 260</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 263</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 507</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 508</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 509</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 39</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 67</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 101</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 131</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 166</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 192</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 225</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 255</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 289</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 317</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 335</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 356</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 380</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 403</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 414</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 438</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 449</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 470</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 482</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 498</li>
+            </ul>
+                  <aside>Flagged by _function_call:variable_get</aside>    </details>
+    <details class="error">
+      <summary><code>variable_set()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2183531">The Variable API has been removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 10</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 11</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 12</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 13</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.install, line 14</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 71</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 72</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 73</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 74</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 75</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 76</li>
+            </ul>
+                  <aside>Flagged by _function_call:variable_set</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_set_message()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2774931"><code>drupal_set_message()</code> moved into stream wrapper manager service.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 124</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 166</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 174</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 198</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 238</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 246</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 251</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 256</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 294</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 299</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 667</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 673</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 678</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 681</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 684</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 904</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 910</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 967</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 970</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 975</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 33</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 49</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 698</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 872</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 890</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 905</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 909</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 915</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 935</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 936</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 24</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 30</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 45</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 60</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 68</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 88</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 90</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 65</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 129</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 13</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 56</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 85</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 90</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 94</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 277</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 323</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 351</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 378</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 382</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 385</li>
+              <li>modules/soul_science_and_concept_map_project/settings.inc, line 77</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_science_and_concept_map_certificate.inc, line 45</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 24</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 89</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 131</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 138</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 449</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 456</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 487</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 488</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 520</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 521</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 551</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 558</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 882</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 889</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 906</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 927</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 928</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 960</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 967</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1444</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1451</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1476</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1477</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1486</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1567</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/cert_new.inc, line 19</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 16</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 32</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_mentor_certificates.inc, line 47</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 137</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 144</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 156</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 335</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 361</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 386</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 418</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 434</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 439</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 446</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 478</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 494</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 499</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 523</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_set_message</aside>    </details>
+    <details class="error">
+      <summary><code>db_delete()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2993033"><code>db_delete()</code> is deprecated.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1480</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1483</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 34</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 44</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 46</li>
+            </ul>
+                  <aside>Flagged by _function_call:db_delete</aside>    </details>
+    <details class="error">
+      <summary><code>db_query()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2993033"><code>db_query()</code> is deprecated.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 115</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 119</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 185</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 189</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 193</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 882</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 917</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 939</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 843</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 867</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 902</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 72</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 76</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 10</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 161</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 165</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 249</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 253</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 305</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 333</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_science_and_concept_map_certificate.inc, line 5</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_science_and_concept_map_certificate.inc, line 14</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 468</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 501</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 902</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1548</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1566</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/cert_new.inc, line 11</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/cert_new.inc, line 134</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_mentor_certificates.inc, line 5</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/list_mentor_certificates.inc, line 13</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 307</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 326</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 334</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 352</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 360</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 400</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 417</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 433</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 460</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 477</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 493</li>
+            </ul>
+                  <aside>Flagged by _function_call:db_query</aside>    </details>
+    <details class="error">
+      <summary><code>db_select()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2993033"><code>db_select()</code> is deprecated.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 99</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 108</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 178</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 421</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 447</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 452</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 472</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_bulk_approval.inc, line 477</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 658</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 727</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 740</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 755</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 770</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 784</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 799</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 811</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 826</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 839</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map.module, line 856</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 6</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 27</li>
+              <li>modules/soul_science_and_concept_map_project/science_and_concept_map_details.inc, line 61</li>
+              <li>modules/soul_science_and_concept_map_project/proposal.inc, line 38</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 16</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 36</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code_delete.inc, line 51</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 111</li>
+              <li>modules/soul_science_and_concept_map_project/run.inc, line 123</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/verify_certificates.inc, line 63</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/mentor_cert_pdf.inc, line 88</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 9</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 20</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 24</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 27</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 74</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 85</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 89</li>
+              <li>modules/soul_science_and_concept_map_project/full_download.inc, line 92</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 7</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 21</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 28</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 78</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 98</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 105</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 159</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 196</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 204</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 270</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 282</li>
+              <li>modules/soul_science_and_concept_map_project/abstract_approval.inc, line 289</li>
+              <li>modules/soul_science_and_concept_map_project/download.inc, line 7</li>
+              <li>modules/soul_science_and_concept_map_project/download.inc, line 35</li>
+              <li>modules/soul_science_and_concept_map_project/download.inc, line 41</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 7</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 44</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 114</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 119</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 174</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 437</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 534</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 539</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 618</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 870</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 942</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 948</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 971</li>
+              <li>modules/soul_science_and_concept_map_project/manage_proposal.inc, line 1432</li>
+              <li>modules/soul_science_and_concept_map_project/pdf/cert_new.inc, line 115</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 9</li>
+              <li>modules/soul_science_and_concept_map_project/general_deletion.inc, line 19</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 15</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 28</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 32</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 53</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 124</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 148</li>
+              <li>modules/soul_science_and_concept_map_project/upload_code.inc, line 528</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 14</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 76</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 141</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 201</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 264</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 327</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 365</li>
+              <li>modules/soul_science_and_concept_map_project/email.inc, line 371</li>
+            </ul>
+                  <aside>Flagged by _function_call:db_select</aside>    </details>
+
+    </details>
+    </body>
+</html>

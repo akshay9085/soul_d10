@@ -77,3 +77,30 @@
 .btn{
     background: #e5f5cb !important;
 }
+
+
+/* table border style*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;     /* Border for all cells */
+  padding: 8px;               /* Space inside cells */
+  text-align: left;
+}
+
+table th {
+  background: #f7f7f7;        /* Light header background */
+  font-weight: bold;
+}
+
+/* Optional: Hover highlight */
+table tr:hover td {
+  background: #f2f2f2;
+}
+

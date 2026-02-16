@@ -893,7 +893,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-    'database' => getenv('ENV_DB'),
+  'database' => getenv('ENV_DB'),
   'username' => getenv('ENV_USR'),
   'password' => getenv('ENV_PSWD'),
   'prefix' => '',
