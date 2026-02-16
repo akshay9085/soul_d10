@@ -1,7 +1,0 @@
-name: 'Science and Concept Map Project'
-description: 'Soul Project, FOSSEE, IIT Bombay'
-package: FOSSEE
-type: module
-core: 8.x
-core_version_requirement: ^8 || ^9 || ^10
-dependencies: {  }
